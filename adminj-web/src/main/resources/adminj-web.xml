@@ -1,0 +1,65 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+           http://www.springframework.org/schema/mvc
+           http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+    <import resource="classpath:adminj-dao.xml" />
+    <import resource="classpath:adminj-dynamic.xml" />
+    <import resource="classpath:adminj-report.xml" />
+    <import resource="classpath:adminj-reso.xml" />
+    <import resource="classpath:adminj-sys.xml" />
+    <import resource="classpath:adminj-tactics.xml" />
+
+    <!-- 开启注解 -->
+    <context:component-scan base-package="com.lhy.*" />
+    <context:annotation-config/>
+    <mvc:annotation-driven />
+
+    <!-- 自动注入 -->
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+
+    <!-- 加载属性文件 -->
+    <bean id="properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <value>classpath:dataSource.properties</value>
+                <value>classpath:application.properties</value>
+                <value>classpath:error_zh_CN.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+        <property name="properties" ref="properties"></property>
+    </bean>
+
+    <!-- 返回JSON返回结果处理类 -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>${message.basename}</value>
+            </list>
+        </property>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!-- 线上环境不允许启用缓存 -->
+        <property name="cacheSeconds" value="${message.cacheSeconds}"/>
+    </bean>
+
+    <bean id="jsonResultHelper" class="com.lhy.springframework.web.servlet.mvc.support.json.JsonResultHelper">
+        <property name="messageHelper">
+            <ref bean="messageHelper" />
+        </property>
+    </bean>
+
+    <bean id="messageHelper" class="com.lhy.springframework.web.util.MessageHelper" />
+
+    <!-- 异常处理 -->
+    <bean id="exceptionHandler" class="com.lhy.adminj.basic.common.MyExceptionHandler"/>
+</beans>
