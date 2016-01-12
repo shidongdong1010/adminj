@@ -1,0 +1,35 @@
+/* displayTag 的样式 */
+table.dpTable {
+	width: 100%;
+	border: 0;
+	background-color: 88B3E0;
+	font-size: 12px;
+	text-align: center;
+}
+
+table.dpTable thead tr {
+	background-image: url(../images/main/bg03.gif);
+	font-weight:normal;
+	text-align: center;
+	height: 22px;
+}
+
+table.dpTable tr {
+	color: #333333;
+	background: #FFFFFF;
+	padding-left: 4px;
+	padding-right: 4px;
+	border-top: #FFFFFF 1px solid;
+	border-left: #FFFFFF 1px solid;
+	height: 22px;
+}
+
+table.dpTable tr.even {
+	color: #333333;
+	background: #EFF6FE;
+	padding-left: 4px;
+	padding-right: 4px;
+	border-top: #FFFFFF 1px solid;
+	border-left: #FFFFFF 1px solid;
+	height: 22px;
+}

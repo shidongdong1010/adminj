@@ -1,0 +1,52 @@
+td {font-size:12px; color: #FFFFFF}
+a:link {color:#FFFFFF; ; text-decoration: none}
+a:active {color:#000000}
+a:visited {color:#FFFFFF;text-decoration:none}
+a:hover{ font-size:12px;color:#FF9900; text-decoration: none}
+.text {
+	padding-top: 4px;
+	color: #BFDAF8;
+	text-align: center;
+	vertical-align: middle;
+}
+.text2 {
+	color: #FFDB84;
+	text-align: center;
+	vertical-align: middle;white-space:nowrap;
+}
+.text3 {
+	color: #F7FCFE;
+	text-align: center;
+	padding-top: 5px;white-space:nowrap;
+}
+
+.rightTClass-show {
+    background-image: url(../images/top/pic_08.gif);
+    background-repeat: no-repeat;
+}
+
+.leftTClass-show {
+    background-image: url(../images/top/pic_07.gif);
+    background-repeat: no-repeat;
+}
+
+.centerTClass-show {
+    background-image: url(../images/top/bg04.gif);
+    background-repeat: repeat-x;
+}
+
+.rightTClass-hidden {
+    background-repeat: no-repeat;
+}
+
+.leftTClass-hidden {
+    background-repeat: no-repeat;
+}
+
+.centerTClass-hidden {
+    background-repeat: repeat-x;
+}
+
+.hand {
+    cursor: pointer;
+}

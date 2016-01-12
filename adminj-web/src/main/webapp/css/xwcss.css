@@ -1,0 +1,39 @@
+/*
+    创建时间：2015－4-10
+    创建人：许伟
+*/
+body{ font-family: sans-serif;}
+.login_bg{background: url("../images/login-bg.jpg") repeat-x; background-position: center; background-attachment: fixed;
+    }
+.lg-area{ width: 1000px; height:460px; position: absolute; top: 50%; left: 50%; margin-left: -500px; margin-top: -230px;text-align:center;
+}
+.logo{}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #999;
+}
+.submit-up{ margin-top: 0;height:50px; width: 700px; margin: 0 auto;}
+    .submit-up .ipt{ -webkit-border-radius: 3px; border-radius: 3px; background-color:#eaeaea ; height:46px; border: 1px solid #ccc;
+    float: left; margin-left:15px; width: 250px;}
+    .submit-up .ipt input{ border: none; background: none; outline: none; height:46px;
+        float: left; line-height: 46px; font-size: 14px; color:#666;}
+    .submit-up i.user { float:left; width:46px; height:46px; background:url("../images/icons.png") no-repeat ;}
+    .submit-up i.pw { float:left; width:46px; height:46px; background:url("../images/icons.png") left -46px no-repeat ; }
+    .btn{ float: left; margin-left:15px;}
+    .btn a{ height: 46px; width: 120px; color: #fff; -webkit-border-radius: 3px; border: 1px solid #ff8644;border-radius: 3px; font-weight: bold; line-height: 46px; background-color: #ff8644; text-align: center;
+    text-decoration: none; display: block; font-size: 24px;}
+    .btn a:hover{ background-color: transparent; border: 1px solid #ff8644; color: #ff8644;}
+
+.cpr{ text-align: center; line-height: 30px; color: #999; font-size: 12px; margin-top: 120px;}
+.headerz{background:#0c8ee9;overflow:hidden;height: 120px;}
+.header{ color: #fff; height: 120px; overflow: hidden; background: url("../images/inside-cloud.png") 650px top no-repeat #0c8ee9;}
+
+.inside-logo{ margin-top: 10px;}
